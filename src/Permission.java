@@ -1,6 +1,7 @@
 public class Permission {
 
-    //COMPLETE THIS CLASS BEFORE TEST CLASS
+
+  //COMPLETE THIS CLASS BEFORE TEST CLASS
 
 
      /*
@@ -12,14 +13,23 @@ public class Permission {
      If the age is more than 20, then it will do nothing
      */
 
+  public static void checkAge(int age) {
+    if (age <= 20) throw new RuntimeException(age + " age is not allowed!");
+  }
 
 
-    /*
-    HERE!
-    Create a method checkClassName
-    The method will be public static void
-    The method will take a String as an argument and check if it is Math or Science (case insensitive)
-    In case the className is not Math or Science, then method will throw an RuntimeException with message "{className} is not allowed!"
-    If the className is Math or Science, then it will do nothing
-     */
+  /*
+  HERE!
+  Create a method checkClassName
+  The method will be public static void
+  The method will take a String as an argument and check if it is Math or Science (case insensitive)
+  In case the className is not Math or Science, then method will throw an RuntimeException with message "{className} is not allowed!"
+  If the className is Math or Science, then it will do nothing
+   */
+  public static void checkClassName(String className) {
+    if (!(className.equalsIgnoreCase("science") || className.equalsIgnoreCase("math")))
+     throw  new RuntimeException(className + " is now allowed!");
+
+
+  }
 }
